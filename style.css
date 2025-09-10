@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: Pretendard, "Courier New", Courier, monospace;
+  background-color: #ddf0e1;
+}
+
+h1 {
+  margin: 0;
+}
+
+#wrap {
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#wrap .section {
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 25px;
+  max-width: 1024px;
+  background-color: #ffffff;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+#profile {
+  position: relative;
+}
+
+#profileImg {
+  width: 280px;
+  border-radius: 50%;
+}
+
+#statusBox {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+#statusImg {
+  width: 80px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 5px #a2a2a2;
+}
+
+#titleBox {
+  margin: 10px 0;
+}
+
+#titleBox .name-local {
+  display: block;
+  font-size: 32px;
+}
+
+#titleBox .name-en {
+  display: block;
+  font-size: 21px;
+  font-weight: 300;
+  color: #aeaeae;
+  text-transform: uppercase;
+}
+
+#infoBox .item-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 28px;
+}
+
+#skillTagBox {
+  margin: 10px 0;
+}
+
+#skillTagBox .item-tag {
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  background-color: #beffe9;
+}
+
+#descBox {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: justify;
+  line-height: 21px;
+  max-height: calc(21 * 3px);
+}
+
+#container {
+  margin-top: 10px !important;
+}
