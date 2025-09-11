@@ -2,128 +2,136 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>팀 포트폴리오</title>
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@100..900&family=Moirai+One&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div>
-        <h1>팀 포트폴리오</h1>
-        <p class="meta">디자인 & 개발 — 팀원 3명의 포트폴리오를 하나로 취합한 템플릿</p>
+<!-- Hero 섹션 -->
+<section class="hero">
+  <div class="hero-box">
+    <h1>이제는 예술이야 진짜로</h1>
+  </div>
+  <p>이 세 사람은 문제아지만 최강도 아닙니다</p>
+</section>
+  <h1></h1>
+  <!-- 팀원 카드 섹션 -->
+  <div class="team-container">
+    <div class="profile-card" data-target="member1">
+      <div class="avatar">A</div>
+      <div class="profile-info">
+        <h3>김현호</h3>
+        <p>총괄</p>
       </div>
-      <div class="role-badge">Design & Dev</div>
-    </header>
+    </div>
+    <div class="profile-card" data-target="member2">
+      <div class="avatar">B</div>
+      <div class="profile-info">
+        <h3>박동우</h3>
+        <p>디자인 & 개발</p>
+      </div>
+    </div>
+    <div class="profile-card" data-target="member3">
+      <div class="avatar">C</div>
+      <div class="profile-info">
+        <h3>신우진</h3>
+        <p>기획 & 개발</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- 프로필 목록 -->
-    <section class="profiles" aria-label="팀 프로필">
-      <article class="profile-card" data-target="member-1" tabindex="0">
-        <div class="avatar">A</div>
-        <div class="profile-info">
-          <h3>이름 1</h3>
-          <p>디자인 & 개발</p>
+  <!-- 포트폴리오 섹션 (wrap으로 중앙 정렬) -->
+  <div class="wrap">
+    <!-- 팀원 1 -->
+    <section class="portfolio-section" id="member1">
+      <h2>김현호</h2>
+      <div class="portfolio-grid">
+        <div>
+          <div class="label">1. 직군</div>
+          <div class="field">총괄</div>
         </div>
-      </article>
-
-      <article class="profile-card" data-target="member-2" tabindex="0">
-        <div class="avatar">B</div>
-        <div class="profile-info">
-          <h3>이름 2</h3>
-          <p>디자인 & 개발</p>
+        <div>
+          <div class="label">2. 사용 가능한 프로그램 / 툴</div>
+          <div class="field"></div>
         </div>
-      </article>
-
-      <article class="profile-card" data-target="member-3" tabindex="0">
-        <div class="avatar">C</div>
-        <div class="profile-info">
-          <h3>이름 3</h3>
-          <p>디자인 & 개발</p>
+        <div>
+          <div class="label">3. 진행/진행중 프로젝트</div>
+          <div class="field large"></div>
         </div>
-      </article>
+        <div>
+          <div class="label">4. 수상 경력</div>
+          <div class="field large"></div>
+        </div>
+        <div class="full-width">
+          <div class="label">5. 기타 역량 (300자 내외)</div>
+          <div class="field large"></div>
+        </div>
+      </div>
     </section>
 
-    <!-- 개인 포트폴리오 섹션들 -->
-    <main>
-      <section id="member-1" class="portfolio-section">
-        <h2>이름 1</h2>
-        <div class="portfolio-grid">
-          <div>
-            <div class="label">1. 직군</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">2. 사용 가능한 프로그램 / 툴</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">3. 진행/진행중 프로젝트</div>
-            <div class="field large"></div>
-          </div>
-          <div>
-            <div class="label">4. 수상 경력</div>
-            <div class="field large"></div>
-          </div>
-          <div style="grid-column:1 / -1;">
-            <div class="label">5. 기타 역량 (300자 내외)</div>
-            <div class="field large"></div>
-          </div>
+    <!-- 팀원 2 -->
+    <section class="portfolio-section" id="member2">
+      <h2>박동우</h2>
+      <div class="portfolio-grid">
+        <div>
+          <div class="label">1. 직군</div>
+          <div class="field">디자인 & 개발</div>
         </div>
-      </section>
+        <div>
+          <div class="label">2. 사용 가능한 프로그램 / 툴</div>
+          <div class="field"></div>
+        </div>
+        <div>
+          <div class="label">3. 진행/진행중 프로젝트</div>
+          <div class="field large"></div>
+        </div>
+        <div>
+          <div class="label">4. 수상 경력</div>
+          <div class="field large"></div>
+        </div>
+        <div class="full-width">
+          <div class="label">5. 기타 역량 (300자 내외)</div>
+          <div class="field large"></div>
+        </div>
+      </div>
+    </section>
 
-      <section id="member-2" class="portfolio-section">
-        <h2>이름 2</h2>
-        <div class="portfolio-grid">
-          <div>
-            <div class="label">1. 직군</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">2. 사용 가능한 프로그램 / 툴</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">3. 진행/진행중 프로젝트</div>
-            <div class="field large"></div>
-          </div>
-          <div>
-            <div class="label">4. 수상 경력</div>
-            <div class="field large"></div>
-          </div>
-          <div style="grid-column:1 / -1;">
-            <div class="label">5. 기타 역량 (300자 내외)</div>
-            <div class="field large"></div>
-          </div>
+    <!-- 팀원 3 -->
+    <section class="portfolio-section" id="member3">
+      <h2>신우진</h2>
+      <div class="portfolio-grid">
+        <div>
+          <div class="label">1. 직군</div>
+          <div class="field">기획 & 개발</div>
         </div>
-      </section>
-
-      <section id="member-3" class="portfolio-section">
-        <h2>이름 3</h2>
-        <div class="portfolio-grid">
-          <div>
-            <div class="label">1. 직군</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">2. 사용 가능한 프로그램 / 툴</div>
-            <div class="field"></div>
-          </div>
-          <div>
-            <div class="label">3. 진행/진행중 프로젝트</div>
-            <div class="field large"></div>
-          </div>
-          <div>
-            <div class="label">4. 수상 경력</div>
-            <div class="field large"></div>
-          </div>
-          <div style="grid-column:1 / -1;">
-            <div class="label">5. 기타 역량 (300자 내외)</div>
-            <div class="field large"></div>
-          </div>
+        <div>
+          <div class="label">2. 사용 가능한 프로그램 / 툴</div>
+          <div class="field"></div>
         </div>
-      </section>
-    </main>
+        <div>
+          <div class="label">3. 진행/진행중 프로젝트</div>
+          <div class="field large"></div>
+        </div>
+        <div>
+          <div class="label">4. 수상 경력</div>
+          <div class="field large"></div>
+        </div>
+        <div class="full-width">
+          <div class="label">5. 기타 역량 (300자 내외)</div>
+          <div class="field large"></div>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <footer>
+    &copy; 2025 팀 포트폴리오
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
