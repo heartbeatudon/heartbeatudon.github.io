@@ -9,14 +9,17 @@ document.querySelectorAll('.profile-card').forEach(card => {
       card.classList.add('active');
     }
   });
-  // 키보드 접근성: Enter키로도 이동
-  card.addEventListener('keydown', (e)=>{
-    if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); card.click(); }
+  // 키보드 접근성: Enter/Space키
+  card.addEventListener('keydown', e=>{
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      card.click();
+    }
   });
 });
 
 // URL 해시로 들어왔을 때 자동 포커스
 if(location.hash){
-  const target = document.querySelector('[data-target="'+location.hash.replace('#','')+'"]');
+  const target = document.querySelector('.profile-card[data-target="'+location.hash.replace('#','')+'"]');
   if(target){target.classList.add('active')}
 }
