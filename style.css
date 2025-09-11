@@ -87,18 +87,20 @@ body {
 }
 
 .team-container {
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  flex-wrap:wrap;
-  gap:30px;
-  width:100%;
-  margin:0 auto 40px auto;
-  padding:0 20px;
-  color: #000000;
+  display: flex;
+  justify-content: center;  /* 가로 중앙 정렬 */
+  align-items: flex-start;  /* 카드 높이가 다를 때 위쪽 맞춤 */
+  flex-wrap: wrap;          /* 화면 좁아지면 다음 줄로 넘어가게 */
+  gap: 30px;
+  width: 100%;
+  max-width: var(--max-width); /* 최대 폭 제한 */
+  margin: 0 auto 40px auto;
+  padding: 0 20px;
 }
 
+
 .profile-card {
+  flex: 0 0 auto;
   background:linear-gradient(180deg,var(--card), rgba(231,222,255,0.7));
   border-radius:20px;
   padding:32px;
@@ -113,7 +115,11 @@ body {
 .avatar{width:100px;height:100px;border-radius:20px;flex:0 0 100px;
   display:flex;justify-content:center;align-items:center;font-weight:700;font-size:26px;
   background:linear-gradient(135deg,#a78bfa,#7c3aed);color:#fff}
-.profile-info h3{margin:0;font-size:20px}
+.profile-info h3{
+  margin:0;
+  font-size:20px;
+  color:#111827;
+}
 .profile-info p{margin:2px 0 0;color:var(--muted);font-size:15px}
 .profile-card.active{outline:2px solid rgba(167,139,250,0.3); box-shadow:0 6px 24px rgba(167,139,250,0.15)}
 
@@ -163,8 +169,12 @@ body {
 }
 
 
-@media(max-width:900px){
-  .portfolio-grid{grid-template-columns:1fr}
+@media (max-width: 900px){
+  .team-container {
+    flex-direction: column;  /* 좁은 화면에서는 세로로 쌓이도록 */
+    align-items: center;
+  }
 }
+
 
 footer{color:var(--muted);font-size:13px;margin-top:10px;text-align:center}
