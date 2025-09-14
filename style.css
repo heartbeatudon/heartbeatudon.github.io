@@ -10,14 +10,15 @@
   --max-width:1100px;
   font-family: Inter, "Noto Sans KR", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
 }
+/* 처음에 글자가 오른쪽에서 날아오는 애니메이션 */
 @keyframes slideInFromRight {
   0% {
-    transform: translateX(30%);  
-    opacity: 0;         
+    transform: translateX(30%);  /* 오른쪽 화면 밖 */
+    opacity: 0;                  /* 투명 */
   }
   100% {
-    transform: translateX(0);   
-    opacity: 1;                  
+    transform: translateX(0);    /* 제자리 */
+    opacity: 1;                  /* 완전히 보임 */
   }
 }
 
@@ -26,8 +27,8 @@ html,body{height:100%;margin:0;scroll-behavior:smooth;}
 
 body {
   background: linear-gradient(160deg, #331A62, #9564C5, #E078D8);
-  background-attachment: fixed;
-  background-size: cover;      
+  background-attachment: fixed; /* 스크롤해도 배경은 고정 */
+  background-size: cover;      /* 화면 전체 덮기 */
   color: #ffffff;
   scroll-behavior: smooth;
   font-family: "Hahmlet", serif;
@@ -38,7 +39,7 @@ body {
 
 
 .hero {
-  min-height: 100vh;
+  min-height: 100vh; /* 화면 전체 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,20 +47,38 @@ body {
   text-align: center;
   background: linear-gradient(
     to bottom,
-    rgba(234, 214, 255, 0.9) 0%,   
+    rgba(234, 214, 255, 0.9) 0%,    /* 위쪽 시작: 90% 불투명 */
     rgba(234, 214, 255, 0.8) 50%,
-    rgba(234, 214, 255, 0.5) 75%,  
-    rgba(234, 214, 255, 0.0) 100%  
+    rgba(234, 214, 255, 0.5) 75%,   /* 70% 지점까지 여전히 불투명 */
+    rgba(234, 214, 255, 0.0) 100%   /* 아래쪽 끝: 완전 투명 */
   );
 }
+
+.hero2 {
+  min-height: 40vh; /* 화면 전체 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 150%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 0%,    /* 위쪽 시작: 90% 불투명 */
+    rgba(0, 0, 0, 0.6) 10%,
+    rgba(0, 0, 0, 0.8) 20%,   /* 70% 지점까지 여전히 불투명 */
+    rgba(0, 0, 0, 1) 100%   /* 아래쪽 끝: 완전 투명 */
+  );
+}
+
 .hero h1, .hero p{
   animation: slideInFromRight 1s ease-out forwards;
 }
 
 .hero-box {
-  background-color: #ffffff; 
-  color: #111827; 
-  padding: 80px 40px; 
+  background-color: #ffffff; /* 흰색 박스 */
+  color: #111827; /* 글자 색 */
+  padding: 80px 40px; /* 박스 안 여백 */
   border-radius: 20px;
   font-size: 72px;
   font-weight: 700;
@@ -73,11 +92,12 @@ body {
   letter-spacing:2px;
   font-weight: 900;
 }
+
 .hero p{
   font-size:40px;
   margin-top:16px;
   opacity:0.85;
-  color: #111827;
+  color: #111827; /* 글자 색 */
   font-family: "Nanum Pen Script", cursive;
   font-weight: 400;
   font-style: normal;
@@ -85,12 +105,12 @@ body {
 
 .team-container {
   display: flex;
-  justify-content: center;  
-  align-items: flex-start;  
-  flex-wrap: wrap;          
+  justify-content: center;  /* 가로 중앙 정렬 */
+  align-items: flex-start;  /* 카드 높이가 다를 때 위쪽 맞춤 */
+  flex-wrap: wrap;          /* 화면 좁아지면 다음 줄로 넘어가게 */
   gap: 30px;
   width: 100%;
-  max-width: var(--max-width); 
+  max-width: var(--max-width); /* 최대 폭 제한 */
   margin: 0 auto 40px auto;
   padding: 0 20px;
 }
@@ -134,7 +154,7 @@ body {
 .portfolio-section {
   max-width: 700px;
   width: 100%;
-  background: rgba(33,22,69,0.5); 
+  background: rgba(33,22,69,0.9); /* 큰 검은 박스 */
   border-radius: 20px;
   padding: 24px;
   border: 1px solid rgba(255,255,255,0.1);
@@ -153,8 +173,8 @@ body {
 
 .label{font-size:13px;color:var(--muted);margin-bottom:6px}
 .field {
-  background: rgba(0,0,0,0.5); 
-  border: 1px solid rgba(255,255,255,0.2); 
+  background: rgba(0,0,0,0.5); /* 기존 rgba(255,255,255,0.05) → 좀 더 진한 색 */
+  border: 1px solid rgba(255,255,255,0.2); /* 테두리는 살짝 유지 */
   padding: 14px;
   border-radius: 8px;
   color: #e5e7eb;
@@ -168,7 +188,7 @@ body {
 
 @media (max-width: 900px){
   .team-container {
-    flex-direction: column;  
+    flex-direction: column;  /* 좁은 화면에서는 세로로 쌓이도록 */
     align-items: center;
   }
 }
